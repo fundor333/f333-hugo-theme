@@ -3,9 +3,11 @@
   <div>
     <h1>{{ .Title }}</h1>
     <!-- ranges through each of the content files associated with a particular taxonomy term and renders the summary.html content view -->
-    {{ range .Data.Pages }}
+    {{ $paginator := .Paginate (where .Data.Pages "Section" .Section) }}
+    {{ range $paginator.Pages }}
     {{ .Render "summary"}}
     {{ end }}
+            {{ template "_internal/pagination.html" . }}
   </div>
 </main>
 {{ end }}

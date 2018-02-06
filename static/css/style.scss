@@ -110,14 +110,6 @@ body {
   color: $f333_black;
 }
 
-li {
-  :before {
-    content: "\25B8 ";
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-}
-
 .page-view {
   column-count: 2;
 
