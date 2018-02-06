@@ -6,16 +6,15 @@
     <ul class="hide-on-med-and-down">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <li class="{{ if $currentPage.HasMenuCurrent 'main' . }}active{{ end }}">
+      <li>
         <a href="{{ .URL }}" class="gray-action">
           <i class="fa fa-{{ .Identifier }}" aria-hidden="true"></i> {{ .Name }}</a>
       </li>
       {{ end }}
     </ul>
     <ul class="side-nav" id="mobile-demo">
-      {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <li class="{{ if $currentPage.HasMenuCurrent 'main' . }}active{{ end }}">
+      <li>
         <a href="{{ .URL }}" class="gray-action">
           <i class="fa fa-{{ .Identifier }}" aria-hidden="true"></i> {{ .Name }}</a>
       </li>

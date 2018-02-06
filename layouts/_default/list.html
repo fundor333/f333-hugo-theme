@@ -1,0 +1,39 @@
+{{ define "body" }}
+
+<div class="page-body col s12 f333">
+  <div class="col s12">
+    <section>
+      <div class="col s12">
+        <div class="row">
+          <article>
+            <header>
+              <h1>{{.Title}}</h1>
+            </header>
+            {{.Content}}
+          </article>
+        </div>
+        {{ $paginator := .Paginate (where .Data.Pages "Section" .Section) }}
+
+        <div class="row article-list">
+          {{ range $paginator.Pages }}
+
+          <div class="col s12 m4">
+            <div class="article-box">
+              <div class="article-preview-container">
+                <div class="article-preview">
+                  <p class="center article-title">{{ .Title }}</p>
+                  <p>{{ .Description }}</p>
+                  <a class="center" href="{{ .URL }}">Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        {{ template "_internal/pagination.html" . }}
+      </div>
+      <br>
+    </section>
+  </div>
+</div>
+{{ end }}
