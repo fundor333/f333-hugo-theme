@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+  <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font/build/web/hack.css'>
+
+  <meta name="description" content="">
+  <meta name="author" content="{{ .author.name }}">
+  <link href="/index.xml" type="application/atom+xml" rel="alternate"
+	title="{{ .Site.Title }} Atom Feed"
+  />
+</head>
+
+<body>
+<div class="col container">
+  <div class="col m10 offset-m1 s12">
+    {{ block "top_head" . }} {{ partial "top_head.html" . }} {{ end }}
+    <div class="row">
+    {{ block "aside" . }} {{ partial "aside.html" . }} {{ end }}
+    </div>
+    <div class="row">
+    {{ block "navbar" . }} {{ partial "navbar.html" . }} {{ end }}
+    </div>
+
+    <div class="row">
+          {{ block "body" . }}  {{ end }}
+
+    </div>
+    <br>
+    {{ block "footer" . }} {{ partial "footer.html" . }} {{ end }}
+  </div>
+
+</div>
+{{ partial 'script.html' . }}
+</body>
+
+</html>

@@ -1,14 +1,14 @@
 <header>
   <br>
   <div class="row">
-    <a href="{{ SITEURL }}">
+    <a href="{{ .Site.BaseUrl }}">
       <div class="col m3 s12">
-	<img class='circle responsive-img center-block' id="header_logo" src='{{ SITEURL }}/theme/img/pilogo.jpg'>
+	<img class='circle responsive-img center-block' id="header_logo" src='/static/img/pilogo.jpg'>
       </div>
       <div class="col m8 offset-m1 s12">
 	<div id="title">
-	  <h1 class="maintitle center-block">{{ SITENAME }}</h1>
-	  <h4 class="maintitle center-block">{{ SITESUBTITLE }}</h4>
+	  <h1 class="maintitle center-block">{{ .Site.Title }}</h1>
+	  <h4 class="maintitle center-block">{{ .Site.Subtitle }}</h4>
 	</div>
       </div>
     </a>
