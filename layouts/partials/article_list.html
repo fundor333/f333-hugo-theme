@@ -1,0 +1,50 @@
+{% extends 'partial/_base.html' %} {% block main_body %}
+
+<div class="page-body col s12 f333">
+  <div class="col s12">
+    <section>
+      <div class="col s12">
+	<div class="row">
+	  <h1>{% block category_header %} {% endblock %}</h1>
+	</div>
+
+	<div class="row article-list">
+	  {% for article in articles_page.object_list %}
+	  <div class="col s12 m4">
+	    <div class="article-box">
+	      <div class="article-preview-container">
+		<div class="article-preview">
+		  <p class="center article-title">{{ article.title | striptags }}</p>
+		  <p>{{ article.summary }}</p>
+		  <a class="center" href="{{ SITEURL }}/{{ article.url }}">Read more</a>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	  {% endfor %}
+	</div>
+
+	<div class="row">
+	  <ul class="pagination">
+	    {% if articles_page.has_previous() %}
+	    <li class="waves-effect left orange">
+	      <a href="{{ SITEURL }}/{{  articles_previous_page.url }}">
+		<i class="material-icons">chevron_left</i>
+	      </a>
+	    </li>
+	    {% endif %} {% if articles_page.has_next() %}
+	    <li class="waves-effect right orange">
+	      <a href="{{ SITEURL }}/{{ articles_next_page.url }}">
+		<i class="material-icons">chevron_right</i>
+	      </a>
+	    </li>
+	    {% endif %}
+	  </ul>
+	</div>
+      </div>
+      <br>
+    </section>
+  </div>
+</div>
+
+{% endblock %}

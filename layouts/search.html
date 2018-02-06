@@ -1,0 +1,24 @@
+{% extends 'partial/_base.html' %} {% block main_body %}
+
+<br>
+<nav class="page-search show-on-small">
+  <div class="nav-wrapper">
+    <form>
+      <div class="input-field">
+	<form id="search" action="{{ SITEURL }}/search.html"
+	      onsubmit="return     a = validateForm(this.elements['q'].value);">
+	  <input type="text" class="search-query" placeholder="🔍 search here" name="q" id="tipue_search_input">
+	</form>
+      </div>
+    </form>
+  </div>
+</nav>
+<br>
+
+<div class="page-body col s12 f333">
+  <div class="row article-list">
+    <div id="tipue_search_content"></div>
+  </div>
+</div>
+
+{% endblock %}

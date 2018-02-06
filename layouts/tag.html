@@ -1,0 +1,16 @@
+{% extends 'partial/article_list.html' %} {% block category_header %}
+
+<div class="col s8">
+  <h1>{{ tag.name }}</h1>
+</div>
+<div class="col s4">
+  {% if CATEGORY_FEED_ATOM %}
+  <h1>
+    <a href="{{ SITEURL }}/post/index.xml">
+      <i class="material-icons">rss_feed</i>
+    </a>
+  </h1>
+  {% endif %}
+</div>
+
+{{ super() }} {% endblock %}

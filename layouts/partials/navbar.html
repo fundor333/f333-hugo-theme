@@ -1,0 +1,24 @@
+<nav class="page-navbar">
+  <div class="nav-wrapper">
+    <a href="#" data-activates="mobile-demo" class="button-collapse">
+      <i class="material-icons gray-text gray-action">menu</i>
+    </a>
+    <ul class="hide-on-med-and-down">
+      {% for fa, title, url in LINKS %}
+      <li>
+	<a href="{{url}}" class="gray-action">
+	  <i class="fa fa-{{fa}}" aria-hidden="true"></i> {{title}}</a>
+      </li>
+      {% endfor%}
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      {% for fa,title, url in LINKS %}
+      <li>
+	<a href="{{url}}" class="gray-action">
+	  <i class="fa fa-{{fa}}" aria-hidden="true"></i> {{title}}</a>
+      </li>
+      {% endfor%}
+    </ul>
+    <a href="{{ SITEURL }}/search.html" class="gray-action">🔍</a>
+  </div>
+</nav>

@@ -1,0 +1,35 @@
+$f333_black: #272429;
+$f333_white: #ddddd6;
+$f333_gray: #7b7979;
+$f333_red: #902a23;
+$f333_orange: #d47b37;
+$f333_green: #608743;
+
+$col_social: $f333_orange;
+$col_primary: $f333_red;
+$col_info: $f333_black;
+$col_success: $f333_green;
+$col_warning: $f333_orange;
+$col_danger: $f333_red;
+
+$f333_color_background_primary: $f333_black;
+$f333_color_font_primary: $f333_white;
+$f333_color_background_secondary: $f333_white;
+$f333_color_font_secondary: $f333_black;
+
+$col_facebook: #3B5998;
+$col_twitter: #1DA1F2;
+$col_linkedin: #0077B5;
+$col_gplus: #DC4E41;
+$col_mail: green;
+
+$colors: (
+  "gray": $f333_gray,
+  "black": $f333_black,
+  "orange": $f333_orange,
+  "primary": $col_primary,
+  "info": $col_info,
+  "success":$col_success,
+  "warning": $col_warning,
+  "danger": $col_danger,
+);

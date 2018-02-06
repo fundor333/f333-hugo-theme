@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='it'>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <link rel="icon" href="{{ SITEURL }}/theme/img/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href=" {{ SITEURL }}/theme/img/favicon.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css"/>
+
+  <meta name="description" content="">
+  <meta name="author" content="{{ AUTHOR }}">
+  {% if FEED_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate"
+	title="{{ SITENAME }} Atom Feed"
+  />
+  {% endif %} {% if FEED_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate"
+	title="{{ SITENAME }} RSS Feed"
+  />
+  {% endif %}
+</head>
+
+<body>
+<br>
+<div class='container'>
+
+  <div class="row center-align" id="title">
+    <a href='{{ SITEURL }}'>
+      <h1 class='black-text center white-text'>{{ SITENAME }}</h1>
+      <h4 class='black-text center white-text'>{{ SITESUBTITLE }}</h4>
+    </a>
+  </div>
+  <div>
+    <a href='{{ SITEURL }}' class="col s12 hide-on-med-and-up">
+      <img src='{{ SITEURL }}/theme/img/pilogo.jpg' class='circle responsive-img'>
+    </a>
+  </div>
+  <div class="row">
+
+    {% for fa,title, url in LINKS %}
+    <a href="{{url}}" class="black-action col s4">
+      <i class="fa fa-{{fa}}" aria-hidden="true"></i> {{title}}
+    </a>
+    {% endfor%}
+
+    <a href="{{ SITEURL }}/search.html" class="gray-action col s4">🔍search</a>
+  </div>
+  <br>
+  <div class="row valign-wrapper">
+    <div class='col hide-on-small-only  offset-m1 m5'>
+      <a href='{{ SITEURL }}'>
+	<img src='{{ SITEURL }}/theme/img/pilogo.jpg' class='circle responsive-img'>
+      </a>
+    </div>
+    <div class='col s12 m4'>
+      <div class="row">
+	<p class="center-align">{{ HOME_TEXT }}</p>
+      </div>
+      <div class="row page-social">
+	{% for fa, url in SOCIAL %}
+	<a class="black-action col s3" href="{{ url }}">
+	  <i class="fa fa-{{fa}} fa-3x" aria-hidden="true"></i>
+	</a>
+	{% endfor %}
+      </div>
+    </div>
+
+  </div>
+  <br>
+  <div class='row'>
+    <div class='col s12 offset-m1 m10'>
+      <div class="container">
+
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'partial/script.html' %}
+</body>
+
+</html>
