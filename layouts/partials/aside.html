@@ -1,15 +1,15 @@
 <div class="f333 page-aside">
-  {% include 'partial/social.html' %}
+  {{ partial 'social.html' . }}
   <!--<div class="container">
     <div class="row">
 
-      {% for tag in tag_cloud %}
+      {{ for tag in tag_cloud }}
       <a class="tag-{{ tag.1 }} gray-action" href="{{ SITEURL }}/{{ tag.0.url }}">
-	{{ tag.0 }} {% if TAG_CLOUD_BADGE %}
+	{{ tag.0 }} {{ if TAG_CLOUD_BADGE }}
 	<span class="badge">{{ tag.2 }},</span>
-	{% endif %}
+	{{ endif }}
       </a>
-      {% endfor %}
+      {{ endfor }}
     </div>
   </div>-->
 </div>

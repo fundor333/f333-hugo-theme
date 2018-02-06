@@ -1,8 +1,26 @@
 <div class="center">
-  {% for fa, url in SOCIAL %}
-  <a href="{{ url }}" class="social-icon">
-    <i class="fa fa-{{fa}} fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+  <a href="{{ .Author.Github }}" class="social-icon">
+    <i class="fa fa-github fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
   </a>
-  {% endfor %}
+
+  <a href="{{ .Author.Facebook }}" class="social-icon">
+    <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+  </a>
+
+  <a href="{{ .Author.Twitter }}" class="social-icon">
+    <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+  </a>
+
+  <a href="{{ .Author.Youtube }}" class="social-icon">
+    <i class="fa fa-youtube fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+  </a>
+
+  <a href="{{ .Author.Instagram }}" class="social-icon">
+    <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+  </a>
+
+  <a href="{{ .Author.Flickr }}" class="social-icon">
+    <i class="fa fa-flickr fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+  </a>
 
 </div>
