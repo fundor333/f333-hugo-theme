@@ -17,17 +17,7 @@
         <div class="row article-list">
           {{ range $paginator.Pages }}
 
-          <div class="col s12 m4">
-            <div class="article-box">
-              <div class="article-preview-container">
-                <div class="article-preview">
-                  <p class="center article-title">{{ .Title }}</p>
-                  <p>{{ .Description }}</p>
-                  <a class="center" href="{{ .URL }}">Read more</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          {{ .Render "summary" }}
           {{ end }}
         </div>
         {{ template "_internal/pagination.html" . }}
