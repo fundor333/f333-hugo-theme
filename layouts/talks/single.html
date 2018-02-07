@@ -1,0 +1,26 @@
+{{ define "body"}}
+<article>
+  <div class="col s6">
+      <p>
+        <a href="{{.Permalink}}">{{.Title}}{{with .Params.talk}} &mdash; {{.}}{{end}}</a>
+      </p>
+  </div>
+  <div class="col s5">
+    <p>{{dateFormat "2006-09-02 15:04" .Params.slot.start}}<-->{{dateFormat "2006-09-02 15:04" .Params.slot.end}}</p>
+  </div>
+  <div class="col s1">
+    <p>
+      <a href="{{ .Params.url }}">
+          <i class="fas fa-link"></i>
+        </a>
+        </p>
+  </div>
+  <div class="col s12">
+    {{.Summary}}
+  </div>
+  {{if ne .Summary .Content}}
+  <a href="{{ .URL }}">Full Talk Details{{with .Params.video}} and Video{{end}}</a>
+  {{end}}
+</article>
+<br>
+{{ end }}
