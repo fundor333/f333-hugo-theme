@@ -12,7 +12,7 @@
       <th>Link</th>
       <tr>
     </tr>
-    {{range sort .Pages ".Params.slot.start" "asc"}}
+    {{range sort .Pages ".Params.slot.start" "desc"}}
       <td>{{dateFormat "2006-09-02 15:04" .Params.slot.start}}</td>
       <td>{{dateFormat "2006-09-02 15:04" .Params.slot.end}}</td>
 
