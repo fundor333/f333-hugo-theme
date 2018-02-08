@@ -20,10 +20,10 @@
         <a href="{{.Permalink}}">{{.Title}}{{with .Params.talk}} &mdash; {{.}}{{end}}</a>
       </td>
       <td>
-        {{ .Params.location}}
+        {{ .Params.slot.location}}
       </td>
       <td>
-          <a href="{{ .Params.url }}"><i class="fas fa-link"></i></a>
+          <a href="{{ .Params.slot.url }}"><i class="fa fa-link"></i></a>
       </td>
     </tr>
     {{end}}
