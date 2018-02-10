@@ -1,0 +1,26 @@
+{{ define "body"}}
+<div>
+  {{if ne .Content ""}}
+  <h1>{{.Title}}</h1>
+  {{.Content}} {{end}}
+  <table class="bordered responsive-table">
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Event</th>
+      <tr>
+    </tr>
+    {{range sort .Pages ".Params.convention.date" "desc"}}
+      <td>{{.Title}}</td>
+      <td>{{dateFormat "2006-09-02 15:04" .Params.convention.date}}</td>
+      <td>
+        {{ .Params.convention.event}}
+      </td>
+      <td>
+          <a href="{{ .Params.convention.url }}"><i class="fa fa-link"></i></a>
+      </td>
+    </tr>
+    {{end}}
+  </table>
+</div>
+{{ end }}
