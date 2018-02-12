@@ -87,6 +87,9 @@ body {
 }
 
 .article-view {
+	img{
+		@extend .center-img;
+}
   ul {
     list-style: none;
     li {
