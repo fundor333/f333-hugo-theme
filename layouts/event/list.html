@@ -1,5 +1,5 @@
 {{ define "body"}}
-<div>
+<div class="col s10 offset-s1">
   {{if ne .Content ""}}
   <h1>{{.Title}}</h1>
   {{.Content}} {{end}}
@@ -23,7 +23,7 @@
         {{ .Params.slot.location}}
       </td>
       <td>
-          <a href="{{ .Params.slot.url }}"><i class="fa fa-link"></i></a>
+          <a href="{{ .Params.slot.url }}"><strong>#</strong></a>
       </td>
     </tr>
     {{end}}
