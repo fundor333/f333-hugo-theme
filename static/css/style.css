@@ -9305,6 +9305,41 @@ body {
   align-self: center;
   color: #ddddd6; }
 
+.page-article h1:before {
+  content: "# ";
+  color: #902a23;
+  font-size: 16pt;
+  font-weight: bold; }
+.page-article h2:before {
+  content: "## ";
+  color: #902a23;
+  font-size: 16pt;
+  font-weight: bold; }
+.page-article h3:before {
+  content: "### ";
+  color: #902a23;
+  font-size: 16pt;
+  font-weight: bold; }
+.page-article h4:before {
+  content: "#### ";
+  color: #902a23;
+  font-size: 16pt;
+  font-weight: bold; }
+.page-article h5:before {
+  content: "##### ";
+  color: #902a23;
+  font-size: 16pt;
+  font-weight: bold; }
+.page-article ul {
+  list-style: none; }
+  .page-article ul li:before {
+    color: #902a23;
+    content: '» \0000a0';
+    font-size: 1.2em;
+    font-weight: bold; }
+.page-article img {
+  padding: 5%; }
+
 .page-navbar,
 .page-footer {
   background-color: #7b7979;
@@ -9341,13 +9376,6 @@ body {
 .article-box {
   padding: 25px; }
 
-.article-view ul {
-  list-style: none; }
-  .article-view ul li p:before {
-    content: "\25B8 ";
-    font-size: 1.2em;
-    font-weight: bold; }
-
 .page-breadcrumb {
   background-color: #ddddd6;
   color: #272429; }
@@ -9360,12 +9388,6 @@ body {
 .page-view {
   column-count: 2;
   color: #7b7979; }
-  .page-view ul {
-    list-style: none; }
-    .page-view ul li :before {
-      content: "\25B8 ";
-      font-size: 1.2em;
-      font-weight: bold; }
   .page-view h1 {
     color: #ddddd6; }
   .page-view h2 {
