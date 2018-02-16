@@ -4,17 +4,16 @@
     @import "_pygment";
     @import "_colors";
     @import "_switch";
-    $font_titles: 'Roboto';
-    $font_size: 16pt;
-    $font_text: 'Roboto';
+    $font_size: 21px;
     body {
         background-color: $f333_color_background_primary;
         color: $f333_color_font_primary;
-        font-family: $font_titles;
         display: flex;
+        font-size: $font_size;
         min-height: 100vh;
         flex-direction: column;
     }
+    
 
     #title {
         h1 {
@@ -32,52 +31,43 @@
 
     .page-aside {}
 
-    .page-article{
-	h1:before {
-		content: "# ";
-		color: $f333_red;
-		font-size: $font_size;
-		font-weight: bold;
-	    }
-	    h2:before {
-		content: "## ";
-		color: $f333_red;
-		font-size: $font_size;
-		font-weight: bold;
-	    }
-	    h3:before {
-		content: "### ";	
-		color: $f333_red;
-		font-size: $font_size;
-		font-weight: bold;
-	    }
-	    h4:before {
-		content: "#### ";
-		color: $f333_red;
-		font-size: $font_size;
-		font-weight: bold;
-	    }
-	    h5:before {
-		content: "##### ";
-		color: $f333_red;
-		font-size: $font_size;
-		font-weight: bold;
-	    }
-
-	    ul {
-		list-style: none;
-		
-		li:before {
-		color: $f333_red;
-		content: '» \0000a0';
-		font-size: 1.2em;
-		font-weight: bold;
-		}
-	    }
-
-	    img{
-		    padding: 5%;
-	    }
+    .page-article {
+        h1:before {
+            content: "# ";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        h2:before {
+            content: "## ";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        h3:before {
+            content: "### ";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        h4:before {
+            content: "#### ";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        h5:before {
+            content: "##### ";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            li:before {
+                color: $f333_red;
+                content: '» \0000a0';
+                font-weight: bold;
+            }
+        }
+        img {
+            padding: 5%;
+        }
     }
 
     .page-navbar,
@@ -149,13 +139,12 @@
 
     .page-view {
         column-count: 2;
-        
         color: $f333_gray;
         @for $i from 1 through 6 {
             h#{$i} {
                 color: $f333_white;
             }
-	}
+        }
     }
 
     .page-title {}
