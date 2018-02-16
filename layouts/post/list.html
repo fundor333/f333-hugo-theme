@@ -1,4 +1,5 @@
 {{ define "body" }}
+
 <div class="page-body col s10 offset-s1 f333">
   <div class="col s12">
     <div class="row">
@@ -10,8 +11,14 @@
       </article>
     </div>
     <div class="row">
-      <!-- ranges through each of the content files associated with a particular taxonomy term and renders the summary.html content view -->
-      {{ range .Data.Pages }} {{ .Render "summary_short"}} {{ end }}
+      {{ $paginator := .Paginate (where .Data.Pages "Section" .Section) }}
+
+      <div class="row article-list">
+        {{ range $paginator.Pages }} {{ .Render "summary" }} {{ end }}
+      </div>
+      <div class="row center">
+        {{ template "_internal/pagination.html" . }}
+      </div>
     </div>
   </div>
 </div>
