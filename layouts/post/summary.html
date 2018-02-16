@@ -1,19 +1,21 @@
-<div class="col s12 article-preview-container">
-  <div class="col m4 s12">
-    <a href="{{ .URL }}">
-      <span class="article-title">{{ .Title }}</span>
-    </a>
+<div class="col m6 s12 article-preview-container same_hight">
+
+  <div class="card">
+    {{with .Params.feature_image}}
+    <div class="card-image">
+      <img src="{{ . }}" \>
+    </div>
+    {{end}}
+    <div class="card-stacked">
+      <div class="card-content">
+        <span class="article-title row">{{ .Title }}</span>
+        <span class="article-date row">{{ dateFormat "2006 Jan 2" .Date }}</span>
+
+        <p>{{ .Description }}</p>
+      </div>
+    </div>
+    <div class="card-action">
+      <a href="{{ .URL }}">Read more</a>
+    </div>
   </div>
-  <div class="col m6 s12">
-    <span>{{ .Description }}</span>
-  </div>
-  <div class="col m2 s12">
-    <a href="{{ .URL }}">Link</a>
-  </div>
-  {{with .Params.feature_image}}
-  <div class="row">
-    <img class="center-img circle responsive-img" src="{{ . }}" \>
-  </div>
-  {{end}}
 </div>
-<br>

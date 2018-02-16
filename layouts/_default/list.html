@@ -2,28 +2,25 @@
 
 <div class="page-body col s10 offset-s1 f333">
   <div class="col s12">
-    <section>
-      <div class="col s12">
-        <div class="row">
-          <article>
-            <header>
-              <h1>{{.Title}}</h1>
-            </header>
-            {{.Content}}
-          </article>
-        </div>
-        {{ $paginator := .Paginate (where .Data.Pages "Section" .Section) }}
+    <div class="row">
+      <article>
+        <header>
+          <h1>{{.Title}}</h1>
+        </header>
+        {{.Content}}
+      </article>
+    </div>
+    <div class="row">
+      {{ $paginator := .Paginate (where .Data.Pages "Section" .Section) }}
 
-        <div class="row article-list">
-          {{ range $paginator.Pages }}
-
-          {{ .Render "summary" }}
-          {{ end }}
-        </div>
+      <div class="row article-list">
+        {{ range $paginator.Pages }} {{ .Render "summary" }} {{ end }}
+      </div>
+      <div class="row center">
         {{ template "_internal/pagination.html" . }}
       </div>
-      <br>
-    </section>
+    </div>
   </div>
 </div>
 {{ end }}
+
