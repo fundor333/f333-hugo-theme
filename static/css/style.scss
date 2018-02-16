@@ -16,6 +16,11 @@
         flex-direction: column;
     }
 
+    .card{
+	background-color: $f333_color_background_primary;
+        color: $f333_color_font_primary; 
+    }
+
     #title {
         h1 {
             font-size: 500% !important;
@@ -92,6 +97,7 @@
         color: $f333_color_font_primary;
     }
 
+    
     .page-result {}
 
     .page-social {
@@ -110,18 +116,8 @@
         font-size: 120%;
     }
 
-    .article-preview-container {
-        padding-top: 13px;
-        border-right: 4px solid $f333_gray;
-        border-bottom: 4px solid $f333_gray;
-        border-radius: 25px;
-        margin: 4px;
-    }
-
-    .article-preview {
-        padding-right: 25px;
-        padding-left: 25px;
-        padding-bottom: 25px;
+    .article-date{
+	    color: $f333_green !important;
     }
 
     .article-box {
@@ -256,4 +252,11 @@
         display: block;
         height: 0;
         clear: both;
+    }
+
+
+    .article-preview-img{
+	    max-width: 100px;
+	    max-height: 100px;
+	object-fit: cover;
     }
