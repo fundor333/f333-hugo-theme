@@ -8,8 +8,8 @@
     {{end}}
     <div class="card-stacked">
       <div class="card-content">
-        <span class="article-title row">{{ .Title }}</span>
-        <span class="article-date row">{{ dateFormat "2006 Jan 2" .Date }}</span>
+        <span class="article-title">{{ .Title }}</span>
+        <p class="article-date">{{ dateFormat "2006 Jan 2" .Date }}</p>
 
         <p>{{ .Description }}</p>
       </div>
