@@ -1,131 +1,167 @@
-.highlight {
-  .hll {
-    background-color: #49483e;
-  }
-  background: #272822;
-  color: #f8f8f2;
-  .c {
-    color: #75715e;
-  }
-  .err {
-    color: #960050;
-    background-color: #1e0010;
-  }
-  .k {
-    color: #66d9ef;
-  }
-  .l {
-    color: #ae81ff;
-  }
-  .n {
-    color: #f8f8f2;
-  }
-  .o {
-    color: #f92672;
-  }
-  .p {
-    color: #f8f8f2;
-  }
-  .ch, .cm, .cp, .cpf, .c1, .cs {
-    color: #75715e;
-  }
-  .gd {
-    color: #f92672;
-  }
-  .ge {
-    font-style: italic;
-  }
-  .gi {
-    color: #a6e22e;
-  }
-  .gs {
-    font-weight: bold;
-  }
-  .gu {
-    color: #75715e;
-  }
-  .kc, .kd {
-    color: #66d9ef;
-  }
-  .kn {
-    color: #f92672;
-  }
-  .kp, .kr, .kt {
-    color: #66d9ef;
-  }
-  .ld {
-    color: #e6db74;
-  }
-  .m {
-    color: #ae81ff;
-  }
-  .s {
-    color: #e6db74;
-  }
-  .na {
-    color: #a6e22e;
-  }
-  .nb {
-    color: #f8f8f2;
-  }
-  .nc {
-    color: #a6e22e;
-  }
-  .no {
-    color: #66d9ef;
-  }
-  .nd {
-    color: #a6e22e;
-  }
-  .ni {
-    color: #f8f8f2;
-  }
-  .ne, .nf {
-    color: #a6e22e;
-  }
-  .nl, .nn {
-    color: #f8f8f2;
-  }
-  .nx {
-    color: #a6e22e;
-  }
-  .py {
-    color: #f8f8f2;
-  }
-  .nt {
-    color: #f92672;
-  }
-  .nv {
-    color: #f8f8f2;
-  }
-  .ow {
-    color: #f92672;
-  }
-  .w {
-    color: #f8f8f2;
-  }
-  .mb, .mf, .mh, .mi, .mo {
-    color: #ae81ff;
-  }
-  .sa, .sb, .sc, .dl, .sd, .s2 {
-    color: #e6db74;
-  }
-  .se {
-    color: #ae81ff;
-  }
-  .sh, .si, .sx, .sr, .s1, .ss {
-    color: #e6db74;
-  }
-  .bp {
-    color: #f8f8f2;
-  }
-  .fm {
-    color: #a6e22e;
-  }
-  .vc, .vg, .vi, .vm {
-    color: #f8f8f2;
-  }
-  .il {
-    color: #ae81ff;
-  }
-}
+/* Dracula Theme v1.2.5
+ *
+ * https://github.com/zenorocha/dracula-theme
+ *
+ * Copyright 2016, All rights reserved
+ *
+ * Code licensed under the MIT license
+ * http://zenorocha.mit-license.org
+ *
+ * @author Rob G <wowmotty@gmail.com>
+ * @author Chris Bracco <chris@cbracco.me>
+ * @author Zeno Rocha <hi@zenorocha.com>
+ * @author Piruin Panichphol <piruin.p@gmail.com>
+ */
+
+/*
+ * Variables
+ */
+
+ $dt-gray-dark: #282a36;  // Background
+ $dt-gray: #44475a;       // Current Line & Selection
+ $dt-gray-light: #f8f8f2; // Foreground
+ $dt-blue: #6272a4;       // Comment
+ $dt-cyan: #8be9fd;
+ $dt-green: #50fa7b;
+ $dt-orange: #ffb86c;
+ $dt-pink: #ff79c6;
+ $dt-purple: #bd93f9;
+ $dt-red: #ff5555;
+ $dt-yellow: #f1fa8c;
+ 
+ /*
+  * Styles
+  */
+ 
+ .highlight {
+   background: $dt-gray-dark;
+   color: $dt-gray-light;
+ 
+   .hll,
+   .s,
+   .sa,
+   .sb,
+   .sc,
+   .dl,
+   .sd,
+   .s2,
+   .se,
+   .sh,
+   .si,
+   .sx,
+   .sr,
+   .s1,
+   .ss {
+     color: $dt-yellow;
+   }
+ 
+   .go {
+     color: $dt-gray;
+   }
+ 
+   .err,
+   .g,
+   .l,
+   .n,
+   .x,
+   .p,
+   .ge,
+   .gr,
+   .gh,
+   .gi,
+   .gp,
+   .gs,
+   .gu,
+   .gt,
+   .ld,
+   .no,
+   .nd,
+   .ni,
+   .ne,
+   .nn,
+   .nx,
+   .py,
+   .w,
+   .bp {
+     color: $dt-gray-light;
+   }
+ 
+   .gh,
+   .gi,
+   .gu {
+     font-weight: bold;
+   }
+ 
+   .ge {
+     text-decoration: underline;
+   }
+ 
+   .bp {
+     font-style: italic;
+   }
+ 
+   .c,
+   .ch,
+   .cm,
+   .cpf,
+   .c1,
+   .cs {
+     color: $dt-blue;
+   }
+ 
+   .kd,
+   .kt,
+   .nb,
+   .nl,
+   .nv,
+   .vc,
+   .vg,
+   .vi,
+   .vm {
+     color: $dt-cyan;
+   }
+ 
+   .kd,
+   .nb,
+   .nl,
+   .nv,
+   .vc,
+   .vg,
+   .vi,
+   .vm {
+     font-style: italic;
+   }
+ 
+   .na,
+   .nc,
+   .nf,
+   .fm {
+     color: $dt-green;
+   }
+ 
+   .k,
+   .o,
+   .cp,
+   .kc,
+   .kn,
+   .kp,
+   .kr,
+   .nt,
+   .ow {
+     color: $dt-pink;
+   }
+ 
+   .m,
+   .mb,
+   .mf,
+   .mh,
+   .mi,
+   .mo,
+   .il {
+     color: $dt-purple;
+   }
+ 
+   .gd {
+     color: $dt-red;
+   }
+ }
