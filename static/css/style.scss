@@ -13,11 +13,10 @@
         min-height: 100vh;
         flex-direction: column;
     }
-    
 
-    .card{
-	background-color: $f333_color_background_primary;
-        color: $f333_color_font_primary; 
+    .card {
+        background-color: $f333_color_background_primary;
+        color: $f333_color_font_primary;
     }
 
     #title {
@@ -38,40 +37,55 @@
 
     .page-article {
         h1:before {
-            content: "# ";
+            content: "<";
             color: $f333_red;
             font-weight: bold;
-        }
-        h2:before {
-            content: "## ";
-            color: $f333_red;
-            font-weight: bold;
-        }
-        h3:before {
-            content: "### ";
-            color: $f333_red;
-            font-weight: bold;
-        }
-        h4:before {
-            content: "#### ";
-            color: $f333_red;
-            font-weight: bold;
-        }
-        h5:before {
-            content: "##### ";
-            color: $f333_red;
-            font-weight: bold;
-        }
+	}
+	h1:after {
+		content: ">";
+		color: $f333_red;
+		font-weight: bold;
+	    }
+	    h2:before {
+		content: "<<";
+		color: $f333_red;
+		font-weight: bold;
+	    }
+	    h2:after {
+		content: ">>";
+		color: $f333_red;
+		font-weight: bold;
+	    }
+	    h3:before {
+		content: "<<<";
+		color: $f333_red;
+		font-weight: bold;
+	    
+	    }
+	    h3:after {
+		content: ">>>";
+		color: $f333_red;
+		font-weight: bold;
+	    
+	    }
         ul {
-            list-style: none;
-            li:before {
-                color: $f333_red;
-                content: '» \0000a0';
-                font-weight: bold;
-            }
+		list-style-type: square;
         }
         img {
             padding: 5%;
+        }
+    }
+
+    .tag {
+        &:before {
+            content: "<#>";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        &:after {
+            content: "</#>";
+            color: $f333_red;
+            font-weight: bold;
         }
     }
 
@@ -87,7 +101,6 @@
         color: $f333_color_font_primary;
     }
 
-    
     .page-result {}
 
     .page-social {
@@ -106,8 +119,8 @@
         font-size: 120%;
     }
 
-    .article-date{
-	    color: $f333_green !important;
+    .article-date {
+        color: $f333_green !important;
     }
 
     .article-box {
@@ -120,11 +133,6 @@
         img {
             @extend .center-img;
         }
-    }
-
-    .page-breadcrumb {
-        background-color: $f333_color_background_secondary;
-        color: $f333_color_font_secondary;
     }
 
     .page-search {
@@ -191,12 +199,47 @@
         color: $f333_orange;
     }
 
-    .breadcrumb {
+    .page-breadcrumb {
         color: $f333_orange;
-    }
+        vertical-align: bottom;
+        margin: 0;
+        &:last-child {
+            color: $f333_orange
+        }
+        .breadcrumb {
+	    color: $f333_orange;
+	    text-transform: lowercase;
 
-    .breadcrumb:last-child {
-        color: $f333_orange
+            &:before {
+                margin: 0;
+                content: '{';
+                color: $f333_color_font_primary;
+                display: inline-block;
+                font-family: 'Material Icons';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 25px;
+                -webkit-font-smoothing: antialiased;
+            }
+            &:first-child:before {
+                margin: 0;
+                display: float;
+	    }
+	    &:last-child:after {
+                margin: 0;
+		display: float;
+		content: "}" !important;
+            }
+            &:after {
+                margin: 0;
+                color: $f333_color_font_primary;
+                content: "} + " !important;
+            }
+        }
+        &:after,
+        &:before {
+            color: $f333_black;
+        }
     }
 
     .tagcloud {
@@ -214,6 +257,12 @@
             font-size: #{180% -(30*$i)};
         }
     }
+
+    ul li{
+	list-style-type: square !important;
+	list-style-position: outside !important;
+	list-style-image: none !important;
+       }
 
     .facebook {
         background-color: $col_facebook !important;
@@ -243,9 +292,15 @@
         clear: both;
     }
 
+    .article-preview-img {
+        max-width: 100px;
+        max-height: 100px;
+        object-fit: cover;
+    }
 
-    .article-preview-img{
-	    max-width: 100px;
-	    max-height: 100px;
-	object-fit: cover;
+    .nav-wrapper{
+	    li
+	    {
+		    list-style: none;
+	    }
     }
