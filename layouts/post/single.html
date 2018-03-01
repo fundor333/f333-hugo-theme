@@ -5,20 +5,15 @@
   <div class="page-article">
     <h1 class="page-title">{{ .Title }}</h1>
 
-    <nav class="page-breadcrumb hide-on-small-only">
-      <div class="nav-wrapper ">
-        <div class="col s12">
-          <a href="{{ .Site.BaseURL }}" class="breadcrumb">
-            home
-          </a>
-          <a href='{{ .Site.BaseURL }}/{{ .URL }}' class="breadcrumb">
-            {{ .Title }}
-          </a>
-        </div>
+    <div class="page-breadcrumb hide-on-small-only">
+      <div class="row">
+        <a href="{{ .Site.BaseURL }}" class="breadcrumb">home</a>
+        <a href='{{ .Site.BaseURL }}/{{ .URL }}' class="breadcrumb">
+          {{ .Title }}
+        </a>
       </div>
-    </nav>
+    </div>
 
-    <br>
     <div class="article-view">
       <div class="clearfix">
         {{ .Content }}
@@ -30,25 +25,18 @@
           </p>
         </div>
 
-        <div class="card-action">
+        <div class="row">
 
 
-          {{ with .Params.tags }}
-            {{ range . }}
-            <a class="gray-action" href='{{ "tags" | absURL }}/{{ . | urlize }}'>
-              <i class="fa fa-tag" aria-hidden="true"></i>{{ . }}
-            </a>
-            {{ end }}
-          {{ end }}
-
-
-          {{ with .Params.tags }}
-          {{ range . }}
-          <a class="gray-action" href='{{ "tags" | absURL }}/{{ . | urlize }}'>
-            <i class="fa fa-tag" aria-hidden="true"></i> {{ . }}
+          {{ with .Params.tags }} {{ range . }}
+          <a class="col s3 center tag" href='{{ "tags" | absURL }}/{{ . | urlize }}'>
+            {{ . }}
           </a>
-          {{ end }}
-          {{ end }}
+          {{ end }} {{ end }} {{ with .Params.tags }} {{ range . }}
+          <a class="col s3 center tag" href='{{ "tags" | absURL }}/{{ . | urlize }}'>
+            {{ . }}
+          </a>
+          {{ end }} {{ end }}
 
 
         </div>
@@ -68,25 +56,26 @@
     </a>
     <ul>
       <li>
-        <a href="http://www.facebook.com/share.php?u={{ .Site.BaseURL }}{{ .URL }}"
-           class="waves-effect button btn-floating facebook">
+        <a href="http://www.facebook.com/share.php?u={{ .Site.BaseURL }}{{ .URL }}" class="waves-effect button btn-floating facebook">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a
-          href="https://twitter.com/share?url={{ .Site.BaseURL }}{{ .URL }}&amp;text=Read this amazing article &amp;hashtags=f333"
+        <a href="https://twitter.com/share?url={{ .Site.BaseURL }}{{ .URL }}&amp;text=Read this amazing article &amp;hashtags=f333"
           target="_blank" class=" waves-effect button btn-floating twitter" data-show-count="false">
           <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Site.BaseURL }}{{ .URL }} "
-           class="sharer button btn-floating linkedin ">
-          <i class="fa fa-linkedin " aria-hidden="true "></i></a></li>
-      <li><a href="https://plus.google.com/share?url={{ .Site.BaseURL }}{{ .URL }} "
-             class="waves-effect button btn-floating gplus ">
-        <i class="fa fa-google-plus " aria-hidden="true "></i></a></li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Site.BaseURL }}{{ .URL }} " class="sharer button btn-floating linkedin ">
+          <i class="fa fa-linkedin " aria-hidden="true "></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://plus.google.com/share?url={{ .Site.BaseURL }}{{ .URL }} " class="waves-effect button btn-floating gplus ">
+          <i class="fa fa-google-plus " aria-hidden="true "></i>
+        </a>
+      </li>
 
     </ul>
   </div>
