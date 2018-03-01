@@ -13,11 +13,10 @@
         min-height: 100vh;
         flex-direction: column;
     }
-    
 
-    .card{
-	background-color: $f333_color_background_primary;
-        color: $f333_color_font_primary; 
+    .card {
+        background-color: $f333_color_background_primary;
+        color: $f333_color_font_primary;
     }
 
     #title {
@@ -87,7 +86,6 @@
         color: $f333_color_font_primary;
     }
 
-    
     .page-result {}
 
     .page-social {
@@ -106,8 +104,8 @@
         font-size: 120%;
     }
 
-    .article-date{
-	    color: $f333_green !important;
+    .article-date {
+        color: $f333_green !important;
     }
 
     .article-box {
@@ -243,9 +241,15 @@
         clear: both;
     }
 
+    .article-preview-img {
+        max-width: 100px;
+        max-height: 100px;
+        object-fit: cover;
+    }
 
-    .article-preview-img{
-	    max-width: 100px;
-	    max-height: 100px;
-	object-fit: cover;
+    .nav-wrapper{
+	    li
+	    {
+		    list-style: none;
+	    }
     }
