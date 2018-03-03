@@ -1,5 +1,3 @@
-    @import "../sass/materialize";
-    @import "../scss/font-awesome";
     @import url('https://fonts.googleapis.com/css?family=Special+Elite');
     @import "_pygment";
     @import "_colors";
@@ -32,8 +30,6 @@
             color: $f333_color_font_primary;
         }
     }
-
-    .page-aside {}
 
     .page-article {
         h1:before {
@@ -101,8 +97,6 @@
         color: $f333_color_font_primary;
     }
 
-    .page-result {}
-
     .page-social {
         a {
             color: $col_social;
@@ -127,8 +121,6 @@
         padding: 25px;
     }
 
-    .article-list {}
-
     .article-view {
         img {
             @extend .center-img;
@@ -151,14 +143,13 @@
         }
     }
 
-    .page-title {}
-
     .anchor-link {
         visibility: hidden
     }
 
     img {
-        @extend .responsive-img;
+	max-width: 100%;
+	height: auto;
     }
 
     @each $color_name,
@@ -301,6 +292,6 @@
     .nav-wrapper{
 	    li
 	    {
-		    list-style: none;
+		    list-style: none !important;
 	    }
     }
