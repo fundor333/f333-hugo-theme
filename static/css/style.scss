@@ -66,6 +66,7 @@
 	    }
         ul {
 		list-style-type: square;
+		list-style-position: inside;
         }
         img {
             padding: 5%;
@@ -251,7 +252,7 @@
 
     ul li{
 	list-style-type: square !important;
-	list-style-position: outside !important;
+	list-style-position: inside !important;
 	list-style-image: none !important;
        }
 
