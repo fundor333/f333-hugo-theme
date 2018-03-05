@@ -8,16 +8,18 @@
       <th>Name</th>
       <th>Date</th>
       <th>Event</th>
-      <tr>
+      <th></th>
     </tr>
     {{range sort .Pages ".Params.convention.date" "desc"}}
-      <td>{{.Title}}</td>
-      <td>{{dateFormat "2006-09-02 15:04" .Params.convention.date}}</td>
+      <td>
+        <a href="{{.Permalink}}">{{.Title}}{{with .Params.convention}}{{end}}</a>
+      </td>
+      <td>{{.Params.convention.date}} {{.Params.convention.hour}}</td>
       <td>
         {{ .Params.convention.event}}
       </td>
       <td>
-          <a href="{{ .Params.convention.url }}"><i class="fa fa-link"></i></a>
+          <a href="{{.Permalink}}"><i class="fa fa-link"></i></a>
       </td>
     </tr>
     {{end}}
