@@ -1,6 +1,7 @@
     @import url('https://fonts.googleapis.com/css?family=Special+Elite');
     @import "_pygment";
     @import "_colors";
+    @import "_sizes";
     @import "_switch";
     $font_size: 21px;
     body {
@@ -135,14 +136,17 @@
     }
 
     .page-view {
-        column-count: 2;
         color: $f333_gray;
+	@media screen and (min-width: $medium-screen-up) {
+	column-count: 2;
         @for $i from 1 through 6 {
             h#{$i} {
                 color: $f333_white;
             }
-        }
-    }
+	}
+}
+
+}
 
     .anchor-link {
         visibility: hidden
