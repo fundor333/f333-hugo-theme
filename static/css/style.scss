@@ -4,15 +4,22 @@
     @import "_colors";
     @import "_sizes";
     @import "_switch";
-    $font_size: 21px;
     body {
         font-family: 'Fira Code';
         background-color: $f333_color_background_primary;
         color: $f333_color_font_primary;
         display: flex;
-        font-size: $font_size;
         min-height: 100vh;
         flex-direction: column;
+        @media #{$small-and-down} {
+            font-size: 16px;
+        }
+        @media #{$medium-only} {
+            font-size: 18px;
+        }
+        @media #{$large-and-up} {
+            font-size: 16px;
+        }
     }
 
     .card {
@@ -112,7 +119,6 @@
 
     .article-title {
         color: $col_social;
-        font-size: 120%;
     }
 
     .article-date {
