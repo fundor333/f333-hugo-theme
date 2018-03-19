@@ -43,32 +43,32 @@
 
     .page-article {
         h1:before {
-            content: "<";
+            content: "#";
             color: $f333_red;
             font-weight: bold;
         }
         h1:after {
-            content: ">";
+            content: "#";
             color: $f333_red;
             font-weight: bold;
         }
         h2:before {
-            content: "<<";
+            content: "##";
             color: $f333_red;
             font-weight: bold;
         }
         h2:after {
-            content: ">>";
+            content: "##";
             color: $f333_red;
             font-weight: bold;
         }
         h3:before {
-            content: "<<<";
+            content: "###";
             color: $f333_red;
             font-weight: bold;
         }
         h3:after {
-            content: ">>>";
+            content: "###";
             color: $f333_red;
             font-weight: bold;
         }
@@ -83,12 +83,12 @@
 
     .tag {
         &:before {
-            content: "<#>";
+            content: "<!--";
             color: $f333_red;
             font-weight: bold;
         }
         &:after {
-            content: "</#>";
+            content: "-->";
             color: $f333_red;
             font-weight: bold;
         }
@@ -212,13 +212,11 @@
             text-transform: lowercase;
             &:before {
                 margin: 0;
-                content: '{';
+                content: '<<';
                 color: $f333_color_font_primary;
                 display: inline-block;
-                font-family: 'Material Icons';
                 font-weight: normal;
                 font-style: normal;
-                font-size: 25px;
                 -webkit-font-smoothing: antialiased;
             }
             &:first-child:before {
@@ -228,12 +226,12 @@
             &:last-child:after {
                 margin: 0;
                 display: float;
-                content: "}" !important;
+                content: ">>" !important;
             }
             &:after {
                 margin: 0;
                 color: $f333_color_font_primary;
-                content: "} + " !important;
+                content: ">> <~> " !important;
             }
         }
         &:after,
@@ -258,10 +256,15 @@
         }
     }
 
-    ul li {
-        list-style-type: square !important;
-        list-style-position: inside !important;
-        list-style-image: none !important;
+    .article-view {
+        a {
+             ::before {
+                content: "<";
+            }
+             ::after {
+                content: ">"
+            }
+        }
     }
 
     .facebook {

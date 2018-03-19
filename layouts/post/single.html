@@ -3,10 +3,10 @@
 <div class="page-body col s12 f333">
   <br>
   <div class="page-article">
-    <h1 class="page-title">{{ .Title }}</h1>
+    <h1 class="page-title center">{{ .Title }}</h1>
 
     <div class="page-breadcrumb hide-on-small-only">
-      <div class="row">
+      <div class="row center">
         <a href="{{ .Site.BaseURL }}" class="breadcrumb">home</a>
         <a href='{{ .Site.BaseURL }}/{{ .URL }}' class="breadcrumb">
           {{ .Title }}
@@ -26,7 +26,6 @@
         </div>
 
         <div class="row">
-
 
           {{ with .Params.tags }} {{ range . }}
           <a class="col s3 center tag" href='{{ "tags" | absURL }}/{{ . | urlize }}'>
