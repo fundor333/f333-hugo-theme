@@ -1,10 +1,12 @@
     @import url('https://fonts.googleapis.com/css?family=Special+Elite');
+    @import "_fira_code";
     @import "_pygment";
     @import "_colors";
     @import "_sizes";
     @import "_switch";
     $font_size: 21px;
     body {
+        font-family: 'Fira Code';
         background-color: $f333_color_background_primary;
         color: $f333_color_font_primary;
         display: flex;
@@ -37,37 +39,35 @@
             content: "<";
             color: $f333_red;
             font-weight: bold;
-	}
-	h1:after {
-		content: ">";
-		color: $f333_red;
-		font-weight: bold;
-	    }
-	    h2:before {
-		content: "<<";
-		color: $f333_red;
-		font-weight: bold;
-	    }
-	    h2:after {
-		content: ">>";
-		color: $f333_red;
-		font-weight: bold;
-	    }
-	    h3:before {
-		content: "<<<";
-		color: $f333_red;
-		font-weight: bold;
-	    
-	    }
-	    h3:after {
-		content: ">>>";
-		color: $f333_red;
-		font-weight: bold;
-	    
-	    }
+        }
+        h1:after {
+            content: ">";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        h2:before {
+            content: "<<";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        h2:after {
+            content: ">>";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        h3:before {
+            content: "<<<";
+            color: $f333_red;
+            font-weight: bold;
+        }
+        h3:after {
+            content: ">>>";
+            color: $f333_red;
+            font-weight: bold;
+        }
         ul {
-		list-style-type: square;
-		list-style-position: inside;
+            list-style-type: square;
+            list-style-position: inside;
         }
         img {
             padding: 5%;
@@ -120,7 +120,7 @@
     }
 
     .article-box {
-	padding: 25px;
+        padding: 25px;
     }
 
     .article-view {
@@ -137,24 +137,23 @@
 
     .page-view {
         color: $f333_gray;
-	@media screen and (min-width: $medium-screen-up) {
-	column-count: 2;
-        @for $i from 1 through 6 {
-            h#{$i} {
-                color: $f333_white;
+        @media screen and (min-width: $medium-screen-up) {
+            column-count: 2;
+            @for $i from 1 through 6 {
+                h#{$i} {
+                    color: $f333_white;
+                }
             }
-	}
-}
-
-}
+        }
+    }
 
     .anchor-link {
         visibility: hidden
     }
 
     img {
-	max-width: 100%;
-	height: auto;
+        max-width: 100%;
+        height: auto;
     }
 
     @each $color_name,
@@ -203,9 +202,8 @@
             color: $f333_orange
         }
         .breadcrumb {
-	    color: $f333_orange;
-	    text-transform: lowercase;
-
+            color: $f333_orange;
+            text-transform: lowercase;
             &:before {
                 margin: 0;
                 content: '{';
@@ -220,11 +218,11 @@
             &:first-child:before {
                 margin: 0;
                 display: float;
-	    }
-	    &:last-child:after {
+            }
+            &:last-child:after {
                 margin: 0;
-		display: float;
-		content: "}" !important;
+                display: float;
+                content: "}" !important;
             }
             &:after {
                 margin: 0;
@@ -254,11 +252,11 @@
         }
     }
 
-    ul li{
-	list-style-type: square !important;
-	list-style-position: inside !important;
-	list-style-image: none !important;
-       }
+    ul li {
+        list-style-type: square !important;
+        list-style-position: inside !important;
+        list-style-image: none !important;
+    }
 
     .facebook {
         background-color: $col_facebook !important;
@@ -294,9 +292,8 @@
         object-fit: cover;
     }
 
-    .nav-wrapper{
-	    li
-	    {
-		    list-style: none !important;
-	    }
+    .nav-wrapper {
+        li {
+            list-style: none !important;
+        }
     }
