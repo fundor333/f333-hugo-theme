@@ -1,85 +1,78 @@
 {{ define "mainbody" }}
+<br>
 <div class='container'>
-
-  <div class="row center-align" id="title">
-    <a href="{{ .Site.BaseURL }}">
-      <h1 class='black-text center white-text'>{{ .Site.Title }}</h1>
-      <h4 class='black-text center white-text'>
-        {{ $.Site.Params.subtitle }}
-        </h4>
-    </a>
-  </div>
-  <div>
-    <a href='{{ .Site.BaseURL }}' class="col s12 hide-on-med-and-up">
-      <img src='/img/pilogo.jpg' class='circle responsive-img'>
-    </a>
-  </div>
+  <br>
   <div class="row">
 
-    {{ range .Site.Menus.Main }}
-    <a href="{{ .URL }}" class="gray-action">
-      <i class="fa fa-{{ .Identifier }}" aria-hidden="true"></i> {{ .Name }}
-    </a>
+    <div class="col s12 m6">
+      <div class="card horizontal large">
+
+        <div class="card-image waves-effect waves-block waves-light">
+          <img src='/img/pilogo.jpg'>
+        </div>
+        <div class="card-content">
+          <span class="card-title activator center">{{ .Site.Title }}
+            <i class="material-icons right">more_vert</i>
+          </span>
+          <p class='center'>
+            {{ $.Site.Params.subtitle }}
+          </p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title ">{{ .Site.Title }}
+            <i class="material-icons right">close</i>
+          </span>
+          <p class="center-align black-text">Chi sono? Sono un programmatore 💻 appasionato di Python 🐍, Docker 🐋 e del mondo Open Source. Nel tempo libero
+            cerco di migliorare il mondo, per quanto posso, supportando attività di volontariato e il mondo Open Source.
+            Ho un passato oscuro da PFY e qualche esperienza nel coordinare gruppi di viaggio e volontariato... Questo vuole
+            essere il mio spazio personale/bacheca publica/blog personale dove metto esperienza, progetti e idee... Insomma
+            un diario di un informatico mai cresciuto. Fundor333</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col s12 m6">
+
+      <div class="card-panel valign-wrapper">
+        <div class="row page-social">
+          {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="black-action col s4">
+            <i class="fa fa-{{ .Identifier }}" aria-hidden="true"></i> {{ .Name }}</a>
+          {{ end }}
+        </div>
+      </div>
+
+      <br>
+
+      <div class="card-panel valign-wrapper valign-wrapper">
+        <div class="row page-social center ">
+          <a href="{{ .Site.Params.author.Github }}" class="social-icon col s4">
+            <i class="fa fa-github fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+          </a>
+
+          <a href="{{ .Site.Params.author.Facebook }}" class="social-icon col s4">
+            <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+          </a>
+
+          <a href="{{ .Site.Params.author.Twitter }}" class="social-icon col s4">
+            <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+          </a>
+
+          <a href="{{ .Site.Params.author.Youtube }}" class="social-icon col s4">
+            <i class="fa fa-youtube fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+          </a>
+
+          <a href="{{ .Site.Params.author.Instagram }}" class="social-icon col s4">
+            <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+          </a>
+
+          <a href="{{ .Site.Params.author.Flickr }}" class="social-icon col s4">
+            <i class="fa fa-flickr fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
+          </a>
+
+        </div>
+
+      </div>
+    </div>
     {{ end }}
-
-  </div>
-  <br>
-  <div class="row valign-wrapper">
-    <div class='col hide-on-small-only  offset-m1 m5'>
-      <img src='/img/pilogo.jpg' class='circle responsive-img'>
-    </div>
-    <div class='col s12 m4'>
-      <div class="row">
-        <p class="center-align">Chi sono? Sono un programmatore 💻 appasionato di Python 🐍, Docker 🐋 e del mondo Open
-          Source. Nel tempo libero cerco di migliorare il mondo, per quanto posso, supportando attività di volontariato
-          e il mondo Open Source. Ho un passato oscuro da PFY e qualche esperienza nel coordinare gruppi di viaggio e
-          volontariato... Questo vuole essere il mio spazio personale/bacheca publica/blog personale dove metto
-          esperienza, progetti e idee... Insomma un diario di un informatico mai cresciuto. Fundor333</p>
-      </div>
-
-      <div class="row page-social">
-        {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" class="black-action col s4">
-          <i class="fa fa-{{ .Identifier }}" aria-hidden="true"></i> {{ .Name }}</a>
-        {{ end }}
-      </div>
-
-      <div class="row page-social">
-        <a href="{{ .Site.Params.author.Github }}" class="social-icon">
-          <i class="fa fa-github fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
-        </a>
-
-        <a href="{{ .Site.Params.author.Facebook }}" class="social-icon">
-          <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
-        </a>
-
-        <a href="{{ .Site.Params.author.Twitter }}" class="social-icon">
-          <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
-        </a>
-
-        <a href="{{ .Site.Params.author.Youtube }}" class="social-icon">
-          <i class="fa fa-youtube fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
-        </a>
-
-        <a href="{{ .Site.Params.author.Instagram }}" class="social-icon">
-          <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
-        </a>
-
-        <a href="{{ .Site.Params.author.Flickr }}" class="social-icon">
-          <i class="fa fa-flickr fa-3x" aria-hidden="true"></i>&nbsp;&nbsp;
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-  <br>
-  <div class='row'>
-    <div class='col s12 offset-m1 m10'>
-      <div class="container">
-
-      </div>
-    </div>
-  </div>
-</div>
-{{ end }}
