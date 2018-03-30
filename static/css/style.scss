@@ -53,9 +53,16 @@
             font-size: 300% !important;
         }
         h1,
-        h4 {
+        h2 {
             align-self: center;
             color: $f333_color_font_primary;
+            font-family: $f333_font_title;
+        }
+    }
+
+    #subtitle {
+        h2 {
+            font-family: $f333_font_title;
         }
     }
 
@@ -290,10 +297,10 @@
 
     .article-view {
         a {
-             ::before {
+            ::before {
                 content: "<";
             }
-             ::after {
+            ::after {
                 content: ">"
             }
         }
