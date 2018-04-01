@@ -1,11 +1,14 @@
 $f333_black: #272429;
 $f333_white: #ddddd6;
-$f333_gray: #7b7979;
+$f333_gray: #AAADB7;
+$f333_light_blue: #1da1f2;
+$f333_blue: #0077B5;
 $f333_red: #902a23;
 $f333_orange: #d47b37;
 $f333_green: #608743;
+$f333_red_brown: #713027;
+$f333_brown:#9D8366;
 //
-$col_social: $f333_orange;
 $col_primary: $f333_red;
 $col_info: $f333_black;
 $col_success: $f333_green;
@@ -18,6 +21,19 @@ $f333_color_background_primary_lighter:lighten($f333_color_background_primary, 2
 $f333_color_font_primary: $f333_white;
 $f333_color_background_secondary: $f333_white;
 $f333_color_font_secondary: $f333_black;
+//
+$col_social: $f333_gray;
+$f333_color_link: $f333_orange;
+$f333_color_link_article: $f333_orange;
+$f333_color_link_article_secondary: $f333_red_brown;
+$f333_color_breadcrumb: $f333_light_blue;
+$f333_color_breadcrumb_secondary: $f333_red_brown;
+$f333_color_title_page: $f333_orange;
+$f333_color_card: $f333_orange;
+$f333_color_footer: $f333_brown;
+$f333_color_navbar: $f333_color_footer;
+$f333_color_tag: $f333_orange;
+$f333_color_tag_secondary: $f333_red_brown;
 //
 $col_facebook: #3B5998;
 $col_twitter: #1DA1F2;

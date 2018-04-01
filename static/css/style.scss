@@ -37,12 +37,12 @@
 
     .card {
         background-color: $f333_color_background_primary_light;
-        color: $f333_orange;
+        color: $f333_color_card;
     }
 
     .card-panel {
         background-color: $f333_color_background_primary_light !important;
-        color: $f333_orange;
+        color: $f333_color_card;
     }
 
     #title {
@@ -69,32 +69,32 @@
     .page-article {
         h1:before {
             content: "#";
-            color: $f333_red;
+            color: $f333_color_tag_secondary;
             font-weight: bold;
         }
         h1:after {
             content: "#";
-            color: $f333_red;
+            color: $f333_color_tag_secondary;
             font-weight: bold;
         }
         h2:before {
             content: "##";
-            color: $f333_red;
+            color: $f333_color_tag_secondary;
             font-weight: bold;
         }
         h2:after {
             content: "##";
-            color: $f333_red;
+            color: $f333_color_tag_secondary;
             font-weight: bold;
         }
         h3:before {
             content: "###";
-            color: $f333_red;
+            color: $f333_color_tag_secondary;
             font-weight: bold;
         }
         h3:after {
             content: "###";
-            color: $f333_red;
+            color: $f333_color_tag_secondary;
             font-weight: bold;
         }
         ul {
@@ -107,14 +107,15 @@
     }
 
     .tag {
+        color: $f333_color_tag !important;
         &:before {
-            content: "<!--";
-            color: $f333_red;
+            content: "<!--" !important;
+            color: $f333_color_tag_secondary !important;
             font-weight: bold;
         }
         &:after {
-            content: "-->";
-            color: $f333_red;
+            content: "-->" !important;
+            color: $f333_color_tag_secondary !important;
             font-weight: bold;
         }
     }
@@ -122,7 +123,7 @@
     nav {
         ul {
             a {
-                color: $f333_orange
+                color: $f333_color_navbar
             }
         }
     }
@@ -130,8 +131,11 @@
     .page-navbar,
     .page-footer {
         background-color: $f333_color_background_primary_light;
-        color: $f333_orange;
+        color: $f333_color_footer;
         border-radius: 10px;
+        a {
+            color: $f333_color_footer;
+        }
     }
 
     .page-list {
@@ -168,12 +172,6 @@
         }
     }
 
-    .page-search {
-        border-radius: 10px;
-        background-color: $f333_orange;
-        color: $f333_black;
-    }
-
     .page-view {
         color: $f333_gray;
         @media screen and (min-width: $medium-screen-up) {
@@ -183,6 +181,9 @@
                     color: $f333_white;
                 }
             }
+        }
+        a {
+            color: $f333_color_link_article;
         }
     }
 
@@ -217,7 +218,7 @@
 
     article {
         a {
-            color: $f333_orange !important;
+            color: $f333_color_link !important;
         }
     }
 
@@ -229,24 +230,20 @@
         }
     }
 
-    a {
-        color: $f333_orange;
-    }
-
     .page-breadcrumb {
-        color: $f333_orange;
+        color: $f333_color_breadcrumb;
         vertical-align: bottom;
         margin: 0;
         &:last-child {
-            color: $f333_orange
+            color: $f333_color_breadcrumb;
         }
         .breadcrumb {
-            color: $f333_orange;
+            color: $f333_color_breadcrumb;
             text-transform: lowercase;
             &:before {
                 margin: 0;
                 content: '<<';
-                color: $f333_color_font_primary;
+                color: $f333_color_breadcrumb_secondary;
                 display: inline-block;
                 font-weight: normal;
                 font-style: normal;
@@ -263,19 +260,19 @@
             }
             &:after {
                 margin: 0;
-                color: $f333_color_font_primary;
+                color: $f333_color_breadcrumb_secondary;
                 content: ">> <~> " !important;
             }
         }
         &:after,
         &:before {
-            color: $f333_black;
+            color: $f333_color_font_primary;
         }
     }
 
     .page-body {
         h1 {
-            color: $col_social;
+            color: $f333_color_title_page;
         }
     }
 
@@ -297,12 +294,17 @@
 
     .article-view {
         a {
-            ::before {
-                content: "<";
-            }
-            ::after {
-                content: ">"
-            }
+            color: $f333_color_link_article;
+        }
+        a:before {
+            font-weight: bold;
+            content: "<";
+            color: $f333_color_link_article_secondary;
+        }
+        a:after {
+            font-weight: bold;
+            content: ">";
+            color: $f333_color_link_article_secondary;
         }
     }
 
