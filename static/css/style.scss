@@ -42,7 +42,7 @@
 
     .card-panel {
         background-color: $f333_color_background_primary_light !important;
-        color: $f333_color_card;
+        color: $f333_color_card_text;
     }
 
     #title {
@@ -298,12 +298,12 @@
         }
         a:before {
             font-weight: bold;
-            content: "<";
+            content: "[";
             color: $f333_color_link_article_secondary;
         }
         a:after {
             font-weight: bold;
-            content: ">";
+            content: "]";
             color: $f333_color_link_article_secondary;
         }
     }

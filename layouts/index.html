@@ -31,8 +31,8 @@
 
       <br>
 
-      <div "card-panel valign-wrapper">
-        <p class="center-align black-text">Chi sono? Sono un programmatore 💻 appasionato di Python 🐍, Docker 🐋 e del mondo Open Source. Nel tempo libero
+      <div class="card-panel valign-wrapper">
+        <p class="center-align">Chi sono? Sono un programmatore 💻 appasionato di Python 🐍, Docker 🐋 e del mondo Open Source. Nel tempo libero
           cerco di migliorare il mondo, per quanto posso, supportando attività di volontariato e il mondo Open Source. Ho
           un passato oscuro da PFY e qualche esperienza nel coordinare gruppi di viaggio e volontariato... Questo vuole essere
           il mio spazio personale/bacheca publica/blog personale dove metto esperienza, progetti e idee... Insomma un diario
@@ -43,7 +43,7 @@
 
       <div class="card-panel valign-wrapper">
         <div class="row page-social center ">
-          {{ currentPage := . }} {{ range .Site.Menus.social }}
+          {{ $currentPage := . }} {{ range .Site.Menus.social }}
 
           <a href="{{ .URL }}" class="social-icon col s4">
             <i class="fa fa-{{ .Identifier }} fa-3x" aria-hidden="true"></i> &nbsp;&nbsp;
