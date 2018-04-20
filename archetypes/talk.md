@@ -6,7 +6,7 @@ convention:
   date: ""
   hour: ""
   event: ""
-  speakerdeck_url: ""
+  speakerdeck_code: ""
   source: ""
 ---
 	
