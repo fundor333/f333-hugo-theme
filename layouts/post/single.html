@@ -31,13 +31,7 @@
           <a class="col s3 center tag" href='{{ "tags" | absURL }}/{{ . | urlize }}'>
             {{ . }}
           </a>
-          {{ end }} {{ end }} {{ with .Params.tags }} {{ range . }}
-          <a class="col s3 center tag" href='{{ "tags" | absURL }}/{{ . | urlize }}'>
-            {{ . }}
-          </a>
           {{ end }} {{ end }}
-
-
         </div>
       </div>
     </div>
