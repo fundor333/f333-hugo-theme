@@ -6,7 +6,7 @@
     @import "_switch";
     body {
         font-family: 'Fira Code';
-        background-color: $f333_color_background_primary;
+        background-color: $f333_white;
         color: $f333_color_font_primary;
         display: flex;
         min-height: 100vh;
@@ -38,10 +38,13 @@
     .card {
         background-color: $f333_color_background_primary_light;
         color: $f333_color_card;
+        .page-article {
+            color: $f333_color_font_primary;
+        }
     }
 
     .card-panel {
-        background-color: $f333_color_background_primary_light !important;
+        background-color: $f333_color_background_primary_light;
         color: $f333_color_card_text;
     }
 
@@ -55,13 +58,14 @@
         h1,
         h2 {
             align-self: center;
-            color: $f333_color_font_primary;
+            color: $f333_font_title_color;
             font-family: $f333_font_title;
         }
     }
 
     #subtitle {
         h2 {
+            color: $f333_font_title_color;
             font-family: $f333_font_title;
         }
     }
@@ -155,7 +159,7 @@
     }
 
     .article-title {
-        color: $col_social;
+        color: $f333_color_article_title;
     }
 
     .article-date {
@@ -175,10 +179,9 @@
     .page-view {
         color: $f333_gray;
         @media screen and (min-width: $medium-screen-up) {
-            column-count: 2;
             @for $i from 1 through 6 {
                 h#{$i} {
-                    color: $f333_white;
+                    color: $f333_orange;
                 }
             }
         }
@@ -243,7 +246,7 @@
             &:before {
                 margin: 0;
                 content: '<<';
-                color: $f333_color_breadcrumb_secondary;
+                color: $f333_color_breadcrumb_secondary !important;
                 display: inline-block;
                 font-weight: normal;
                 font-style: normal;
@@ -260,7 +263,7 @@
             }
             &:after {
                 margin: 0;
-                color: $f333_color_breadcrumb_secondary;
+                color: $f333_color_breadcrumb_secondary !important;
                 content: ">> <~> " !important;
             }
         }
@@ -345,5 +348,28 @@
     .nav-wrapper {
         li {
             list-style: none !important;
+        }
+    }
+
+    .event-body {
+        color: $f333_color_font_primary;
+    }
+
+    .event-title {
+        color: $f333_orange;
+    }
+
+    .event-date {
+        align-content: center;
+        color: $f333-gray;
+    }
+
+    .event-content {
+        color: $f333_color_font_primary;
+    }
+
+    .event-action {
+        a {
+            color: $f333-blue !important;
         }
     }
