@@ -41,11 +41,23 @@
         .page-article {
             color: $f333_color_font_primary;
         }
+        transition: box-shadow .25s;
+        box-shadow: 0;
+        &:hover {
+            transition: box-shadow .25s;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
     }
 
     .card-panel {
         background-color: $f333_color_background_primary_light;
         color: $f333_color_card_text;
+        transition: box-shadow .25s;
+        box-shadow: 0;
+        &:hover {
+            transition: box-shadow .25s;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
     }
 
     #title {
@@ -156,6 +168,9 @@
     .social-icon {
         margin-bottom: 10px;
         color: $col_social;
+        &:hover {
+            color: $col_social_secondary;
+        }
     }
 
     .article-title {
