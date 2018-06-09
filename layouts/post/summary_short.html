@@ -1,13 +1,11 @@
 <div class="col s12 article-preview-container">
 
   <div class="card">
-    <div class="card-content">
       <span class="card-title row">
         <span class="article-title left">{{ .Title }}</span>
         <span class="article-date right">{{ dateFormat "2006 Jan 2" .Date }}</span>
       </span>
       <p class="row">{{ .Description }}</p>
-    </div>
     <div class="card-action">
       <a href="{{ .URL }}">Read more</a>
     </div>
