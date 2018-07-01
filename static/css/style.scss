@@ -405,3 +405,9 @@ twitterwidget {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.pagination {
+	li.active {
+		background-color: $f333_color_background_primary_light;
+	}
+}
